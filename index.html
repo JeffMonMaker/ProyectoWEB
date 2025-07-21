@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Tienda online con carrito dinámico, formulario y diseño responsivo" />
+  <meta name="keywords" content="Tienda, Productos, Carrito, Compras, Contacto" />
+  <meta name="author" content="Tu Nombre" />
+  <title>Tienda La Pastora</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Tienda La Pastora</h1>
+    <nav>
+      <ul>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#resenas">Reseñas</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li class="carrito-icono" tabindex="0" aria-label="Ver carrito de compras">
+          🛒 <span id="contador-carrito">0</span>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Sección Productos -->
+    <section id="productos">
+      <h2>Productos</h2>
+      <div id="lista-productos" class="productos-container"></div>
+    </section>
+
+    <!-- Sección Reseñas -->
+    <section id="resenas">
+      <h2>Reseñas</h2>
+      <div class="resenas-grid">
+        <article class="resena-card" tabindex="0">
+          <p>"Excelente calidad y atención."</p>
+          <footer>- Ana G.</footer>
+        </article>
+        <article class="resena-card" tabindex="0">
+          <p>"Muy buen servicio, recomiendo."</p>
+          <footer>- Luis P.</footer>
+        </article>
+        <article class="resena-card" tabindex="0">
+          <p>"Productos a buen precio y entrega rápida."</p>
+          <footer>- María S.</footer>
+        </article>
+        <article class="resena-card" tabindex="0">
+          <p>"Me encantó la experiencia de compra."</p>
+          <footer>- Carlos M.</footer>
+        </article>
+      </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <form id="form-contacto" action="https://formspree.io/f/mayvdbjq" method="POST">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required aria-required="true" />
+        
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required aria-required="true" />
+        
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required aria-required="true"></textarea>
+        
+        <button type="submit">Enviar</button>
+        <p id="form-feedback" role="alert" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <!-- Sección Carrito (modal simple) -->
+    <section id="carrito" aria-label="Carrito de compras" hidden>
+      <h2>Carrito de Compras</h2>
+      <div id="carrito-lista"></div>
+      <div id="carrito-total"></div>
+      <button id="cerrar-carrito" aria-label="Cerrar carrito">Cerrar</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Tienda La Pastora. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="/script.js" defer></script>
+</body>
+</html>
