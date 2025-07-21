@@ -6,4 +6,4 @@ Este proyecto es una tienda básica creada con HTML, CSS y JavaScript. Incluye:
 - Carrito de compras básico.
 - Formulario de contacto funcional con Formspree.
 - Estilos con Flexbox y Grid.
-- Diseño responsive.
+- Diseño responsive.# ProyectoWEB
