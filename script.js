@@ -28,6 +28,16 @@ function mostrarProductos(productos) {
       <button aria-label="Agregar ${producto.title} al carrito" data-id="${producto.id}">Agregar al carrito</button>
     `;
     listaProductos.appendChild(card);
+//agregado para ver en el carrito
+
+    
+    const boton = card.querySelector('button');
+    boton.addEventListener('click', () => {
+      const idProducto = boton.getAttribute('data-id');
+      agregarAlCarrito(idProducto);
+    });
+
+    
   });
 }
 
